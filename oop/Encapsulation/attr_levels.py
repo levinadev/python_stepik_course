@@ -6,19 +6,16 @@
 # пример 1 с одиночным подчеркиванием
 
 
-class Cat:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+"""
+Одиночное подчеркивание в начале имени атрибута говорит о том,
+что переменная или метод не предназначен для использования вне методов класса,
+однако атрибут доступен по этому имени.
+"""
 
-    def host_name(self):
-        host_name = "Anna"
+class A:
+    def _private(self):
+        print("Это приватный метод!")
 
-
-cat = Cat("Barsik", 4)
-print(cat.name)
-print(cat.age)
-
-print(cat.host_name)
-
-# пример 2 с двойным подчеркиванием
+a = A()
+a._private()
+print(a)
